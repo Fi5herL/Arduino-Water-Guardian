@@ -37,9 +37,7 @@
     *   **控制繼電器和 LED：** 根據 `relayState` 的值，HIGH 或 LOW 輸出到 `relayPin` 和 `ledPin`。
     *   **序列埠輸出：** 在序列埠監控器上顯示 `zeroCount`、`waterDetected` 和 `relayState` 的狀態。
 
-**Relay 負載側接線說明：**
-
-您提到的 "Relay 負載側要接 L 控制(COM, NO)" 是正確的。這表示您要控制的負載（例如水泵、燈或其他電器）會連接到 Relay 的 COM (Common) 和 NO (Normally Open) 接點。
+**Relay 負載側Relay接點說明：**
 
 *   **COM (Common):** 這是 Relay 的公共接點。
 *   **NO (Normally Open):** 這個接點在 Relay 未通電時是斷開的。
