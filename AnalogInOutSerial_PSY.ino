@@ -6,7 +6,7 @@ const int testPin = 2;
 const int windowSize = 50;
 const int threshold = 80;
 const int triggerCount = 40;
-const unsigned long debounceTime = 1000;  // 需持續 3 秒才切換
+const unsigned long debounceTime = 1000;  // 需持續 1 秒才切換
 
 int zeroCount = 0;
 bool relayState = false;
@@ -42,7 +42,7 @@ void loop() {
     lastDetected = waterDetected;
   }
 
-  // 持續同樣狀態超過 3 秒才切換
+  // 持續同樣狀態超過 1 秒才切換
   if (millis() - stateStartTime >= debounceTime) {
     relayState = waterDetected;
   }
