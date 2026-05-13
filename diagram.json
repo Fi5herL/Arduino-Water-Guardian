@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "author": "Fi5herL",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -9, "left": -10.2, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -109.2,
+      "left": 61.4,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -44.05,
+      "left": 124.8,
+      "attrs": { "value": "220" }
+    },
+    { "type": "wokwi-relay-module", "id": "relay1", "top": 211.4, "left": 220.8, "attrs": {} },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "waterLevelSensor",
+      "top": 113.9,
+      "left": -115.4,
+      "attrs": { "value": "0" }
+    },
+    {
+      "type": "wokwi-vcc",
+      "id": "vcc12",
+      "top": 58.36,
+      "left": -76.8,
+      "attrs": { "voltage": "12" }
+    },
+    { "type": "wokwi-gnd", "id": "gnd12", "top": 201.6, "left": -96.6, "attrs": {} }
+  ],
+  "connections": [
+    [ "uno:13", "r1:1", "green", [ "v0" ] ],
+    [ "r1:2", "led1:A", "green", [ "v0" ] ],
+    [ "led1:C", "uno:GND.1", "black", [ "v0" ] ],
+    [ "uno:7", "relay1:IN", "blue", [ "v0" ] ],
+    [ "uno:5V", "relay1:VCC", "red", [ "v0" ] ],
+    [ "uno:GND.2", "relay1:GND", "black", [ "v0" ] ],
+    [ "vcc12:VCC", "waterLevelSensor:VCC", "red", [ "h0" ] ],
+    [ "gnd12:GND", "waterLevelSensor:GND", "black", [ "h0" ] ],
+    [ "gnd12:GND", "uno:GND.3", "black", [ "h0" ] ],
+    [ "waterLevelSensor:SIG", "uno:A0", "orange", [ "v38.4", "h274.2" ] ]
+  ],
+  "serialMonitor": { "display": "always", "newline": "lf" },
+  "dependencies": {}
+}
