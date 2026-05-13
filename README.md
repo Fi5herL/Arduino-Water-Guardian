@@ -37,6 +37,13 @@
     *   **控制繼電器和 LED：** 根據 `relayState` 的值，HIGH 或 LOW 輸出到 `relayPin` 和 `ledPin`。
     *   **序列埠輸出：** 在序列埠監控器上顯示 `zeroCount`、`waterDetected` 和 `relayState` 的狀態。
 
+**Wokwi 接線圖說明：**
+
+*   Wokwi 圖中的水位感測器為替代元件，用來表示實際 12V 水位感測器的接線邏輯。
+*   實機時，水位感測器請使用外部 12V 電源供電。
+*   外部 12V 電源的 GND 必須與 Arduino GND 共地。
+*   接到 Arduino A0 的類比訊號電壓不可超過 5V。
+
 **Relay 負載側Relay接點說明：**
 
 *   **COM (Common):** 這是 Relay 的公共接點。
